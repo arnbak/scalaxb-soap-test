@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.4-b01-. -->
+<xs:schema xmlns:tns="http://authentication.v81.api.keysurvey.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://authentication.v81.api.keysurvey.com">
+
+<xs:element name="getAuthenticationToken" type="tns:getAuthenticationToken"/>
+
+<xs:element name="getAuthenticationTokenResponse" type="tns:getAuthenticationTokenResponse"/>
+
+<xs:element name="logoutByToken" type="tns:logoutByToken"/>
+
+<xs:element name="logoutByTokenResponse" type="tns:logoutByTokenResponse"/>
+
+<xs:complexType name="getAuthenticationToken">
+<xs:sequence>
+<xs:element name="login" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAuthenticationTokenResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="logoutByToken">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="logoutByTokenResponse">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>
